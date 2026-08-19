@@ -10,9 +10,6 @@ static dfloat lenScale = 0.01; //m
 static dfloat velScale = 1.0;
 static dfloat timeScale = 1.0;
 
-#define EPS 1.1e-2
-#define EPS_DIM 4e-1 //remove after v26.1 release
-
 void ciSetup(MPI_Comm comm, setupAide &options)
 {
   options.setArgs("POLYNOMIAL DEGREE", std::string("7"));
