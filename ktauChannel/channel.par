@@ -1,13 +1,13 @@
 [GENERAL]
 polynomialOrder = 7
-startFrom = "r.fld"+time=0
+#startFrom = "r.fld"+time=0
 stopAt = endTime
-endTime = 300
-dt = 5e-03
+endTime = 50
+dt = 5e-02
 timeStepper = tombo2
 
 checkpointControl = simulationTime 
-checkpointInterval = 10
+checkpointInterval = 50
 
 constFlowRate = meanVelocity=1.0 + direction=X
 

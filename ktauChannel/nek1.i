@@ -47,7 +47,7 @@
   []
   [pass]
     type = ParsedPostprocessor
-    expression = 'if (rel_err < 1.1e-2, 1, 0)'
+    expression = 'if (rel_err < 4.0e-3, 1, 0)'
     pp_names = 'rel_err'
   []
 []

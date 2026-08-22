@@ -13,7 +13,7 @@ static dfloat timeScale = 1.0;
 void ciSetup(MPI_Comm comm, setupAide &options)
 {
   options.setArgs("POLYNOMIAL DEGREE", std::string("7"));
-  options.setArgs("OVERINTEGRATION POLYNOMIAL DEGREE", std::string("10"));
+  options.setArgs("CUBATURE POLYNOMIAL DEGREE", std::string("10"));
   options.setArgs("CONSTANT FLOW RATE", "TRUE");
   options.setArgs("CONSTANT FLOW DIRECTION", "X");
   options.setArgs("RESTART FILE NAME", std::string("r.fld+time=0"));
@@ -22,10 +22,10 @@ void ciSetup(MPI_Comm comm, setupAide &options)
   options.setArgs("FLUID DENSITY", std::string("1.0"));
   options.setArgs("NUMBER TIMESTEPS", std::string("-1"));
   options.setArgs("END TIME", std::string("10"));
-  options.setArgs("ADVECTION TYPE", "CONVECTIVE+OVERINTEGRATION");
+  options.setArgs("ADVECTION TYPE", "CONVECTIVE+CUBATURE");
   options.setArgs("DT", std::string("4e-2"));
 
-  options.setArgs("SUBCYCLING STEPS", std::string("2"));
+  options.setArgs("SUBCYCLING STEPS", std::string("1"));
 
   options.setArgs("FLUID PRESSURE SOLVER", "GMRES+FLEXIBLE");
   options.setArgs("FLUID PRESSURE SOLVER TOLERANCE", std::string("1e-4"));
