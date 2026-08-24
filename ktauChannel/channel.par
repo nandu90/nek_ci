@@ -11,7 +11,7 @@ checkpointInterval = 50
 
 constFlowRate = meanVelocity=1.0 + direction=X
 
-scalars = temperature, k, tau
+scalars = k, tau
 
 [PROBLEMTYPE]
 equation = navierStokes+variableViscosity
@@ -20,22 +20,15 @@ equation = navierStokes+variableViscosity
 residualTol = 1e-04
 
 [FLUID VELOCITY]
-boundaryTypeMap = zeroDirichlet, zeroDirichletY/zeroNeumann 
+boundaryTypeMap = zeroDirichlet, zeroDirichletY/zeroNeumann
 residualTol = 1e-06
 rho = 1.0
 viscosity = 1/43500. 
 
-[SCALAR TEMPERATURE]
-#solver = none
-boundaryTypeMap = udfDirichlet, zeroNeumann 
-residualTol = 1e-06
-transportCoeff = 1.0
-diffusionCoeff = 1/43500. 
-
-[SCALAR TAU]  
+[SCALAR TAU]
 boundaryTypeMap = udfDirichlet, zeroNeumann 
 residualTol = 1e-08
 
 [SCALAR K]
-boundaryTypeMap = udfDirichlet, zeroNeumann 
-residualTol = 1e-08
+boundaryTypeMap = udfDirichlet, zeroNeumann
+residualTol = 1e-08 

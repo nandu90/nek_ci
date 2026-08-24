@@ -20,6 +20,7 @@
   csv = true
   execute_on = final
   hide = 'drag area utau rel_err'
+  file_base = 'nek1_out'
 []
 
 [Postprocessors]
@@ -27,6 +28,7 @@
     type = NekViscousSurfaceForce
     boundary = '1'
     mesh = fluid
+    component = x
   []
   [area]
     type = NekSideIntegral
@@ -35,7 +37,7 @@
   []
   [utau]
     type = ParsedPostprocessor
-    expression = 'sqrt(drag/area)'
+    expression = 'sqrt(abs(drag) / area)'
     pp_names = 'drag area'
   []
   [rel_err]
@@ -45,7 +47,7 @@
   []
   [pass]
     type = ParsedPostprocessor
-    expression = 'if (rel_err < 4e-3, 1, 0)'
+    expression = 'if (rel_err < 4.0e-3, 1, 0)'
     pp_names = 'rel_err'
   []
 []
