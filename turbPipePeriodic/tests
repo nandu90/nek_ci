@@ -10,6 +10,7 @@
 
     min_parallel = 8
     max_time = 900
+    min_slots = 2 # memory heavy
     heavy = true
 
     issues = '#950'
