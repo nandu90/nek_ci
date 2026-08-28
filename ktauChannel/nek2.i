@@ -32,7 +32,7 @@ utauRef = ${fparse 4.58794e-2 * velScale}
 [Postprocessors]
   [drag]
     type = NekViscousSurfaceForce
-   boundary = '1'
+    boundary = '1'
     mesh = fluid
     component = x
   []
@@ -40,7 +40,7 @@ utauRef = ${fparse 4.58794e-2 * velScale}
   [area]
     type = NekSideIntegral
     field = unity
-   boundary = '1'
+    boundary = '1'
     mesh = fluid
   []
 
