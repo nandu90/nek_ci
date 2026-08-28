@@ -1,6 +1,6 @@
 [Mesh]
   type = NekRSMesh
-  volume = true
+  boundary = '1'
 []
 
 [Problem]
@@ -22,14 +22,14 @@ TOL_CF = 1.04e-2
   [cferr_integral]
     type = NekSideIntegral
     field = scalar03
-    boundary = '1'
+   boundary = '1'
     execute_on = final
   []
 
   [surface_area]
     type = NekSideIntegral
     field = unity
-    boundary = '1'
+   boundary = '1'
     execute_on = final
   []
 

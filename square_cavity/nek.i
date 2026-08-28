@@ -2,7 +2,7 @@ mesh_width = 0.0193145
 
 [Mesh]
   type = NekRSMesh
-  volume = true
+  boundary = '1'
 []
 
 [Problem]
@@ -22,7 +22,7 @@ mesh_width = 0.0193145
 [Postprocessors]
   [heat_flux]
     type = NekHeatFluxIntegral
-    boundary = '1'
+   boundary = '1'
   []
   [nusselt]
     type = ParsedPostprocessor

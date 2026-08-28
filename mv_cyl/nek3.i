@@ -1,6 +1,6 @@
 [Mesh]
   type = NekRSMesh
-  volume = true
+  boundary = '1'
 []
 
 [Problem]
@@ -145,14 +145,14 @@ TERMV_ABS_TOL = 1.0E-11
   [termV_x]
     type = NekSideIntegral
     field = velocity_x
-    boundary = '1'
+   boundary = '1'
     execute_on = final
   []
 
   [termV_y]
     type = NekSideIntegral
     field = velocity_y
-    boundary = '1'
+   boundary = '1'
     execute_on = final
   []
 

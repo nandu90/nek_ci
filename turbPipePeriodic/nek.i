@@ -1,6 +1,6 @@
 [Mesh]
   type = NekRSMesh
-  volume = true
+  boundary = '1'
 []
 
 [Problem]
@@ -40,14 +40,14 @@ P_EPS = 2.00E-02
 [Postprocessors]
   [drag]
     type = NekViscousSurfaceForce
-    boundary = '1'
+   boundary = '1'
     mesh = fluid
     component = z
   []
   [area]
     type = NekSideIntegral
     field = unity
-    boundary = '1'
+   boundary = '1'
   []
   [utau]
     type = ParsedPostprocessor
